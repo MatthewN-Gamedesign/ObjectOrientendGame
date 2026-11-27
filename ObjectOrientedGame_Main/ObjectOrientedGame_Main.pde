@@ -12,7 +12,7 @@ void setup() {
 
 void draw() {
  background(255,230,137); 
- //int spawn = millis();
+ int spawn = millis();
  
  //Level
  fill(123,7,227);
@@ -21,11 +21,13 @@ void draw() {
  player.display();
  player.move();
  if (goblin.size()<30) {
- Goblin a = new Goblin();
- goblin.add(a);
+    Goblin a = new Goblin();
+    goblin.add(a);
  }
  for ( int i = 0; i < goblin.size(); i++) {
     goblin.get(i).display();
     goblin.get(i).move();
  }
+ 
+ 
 }
