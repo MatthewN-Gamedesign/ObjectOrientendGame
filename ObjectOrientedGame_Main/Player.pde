@@ -18,6 +18,7 @@ class Player {
   
   void move(){
     position.add(velocity);
+    
     if (keyPressed) {
   if (key == 'w' || key =='W'){
    // velocity.x = 0;
@@ -35,17 +36,34 @@ class Player {
     velocity.x = 1;
     //velocity.y = 0;
     
-  } //if (key == 'w' && key == 'a') {
-   // velocity.x = -1;
-    //velocity.y = -1;
- // }
+  }
   
   }
   if (keyPressed == false) {
     velocity.x = 0;
     velocity.y = 0;
   }
+  colision();
 
+ }
+ 
+ void colision() {
+   if(position.x == 400){
+     velocity.x = 0;
+     velocity.x = -1;
+    }
+  if(position.x == 0){
+     velocity.x = 0;
+     velocity.x = 1;
+    }
+  if(position.y == 100){
+     velocity.y = 0;
+     velocity.y = 1;
+    }
+   if(position.y == 300){
+     velocity.y = 0;
+     velocity.y = -1;
+    }
  }
 
   }
