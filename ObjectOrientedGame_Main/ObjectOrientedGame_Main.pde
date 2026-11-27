@@ -1,15 +1,18 @@
-//This is main. add the work into a branch
 Player player;
+ArrayList<Goblin> goblin;
 //float speedX;
-//float speedY;
+//float speedY;\
+
 
 void setup() {
  size(400,400);
  player = new Player();
+ goblin = new ArrayList<Goblin>();
 }
 
 void draw() {
  background(255,230,137); 
+ //int spawn = millis();
  
  //Level
  fill(123,7,227);
@@ -17,4 +20,12 @@ void draw() {
  rect(0,300, 400, 100);
  player.display();
  player.move();
+ if (goblin.size()<30) {
+ Goblin a = new Goblin();
+ goblin.add(a);
+ }
+ for ( int i = 0; i < goblin.size(); i++) {
+    goblin.get(i).display();
+    goblin.get(i).move();
+ }
 }
