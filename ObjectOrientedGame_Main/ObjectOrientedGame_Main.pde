@@ -36,6 +36,9 @@ void draw() {
  for ( int i = 0; i < goblin.size(); i++) {
     goblin.get(i).display();
     goblin.get(i).move();
+    if (goblin.get(i).end()) {
+      goblin.remove(i);
+    }
     if (goblin.get(i).intersection(player)) {
    game = false;
  }

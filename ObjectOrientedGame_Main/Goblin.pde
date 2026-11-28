@@ -7,7 +7,7 @@ class Goblin {
   Goblin(){
     position = new PVector (0, random(100,300));
     
-    velocity = new PVector(1,0);
+    velocity = new PVector(random(1,1.5),0);
     
     size = 15;
   }
@@ -29,6 +29,15 @@ class Goblin {
     return true;
    } else {
      return false;
+   }
+ }
+ 
+ boolean end() {
+   if (position.x > 400) {
+     velocity.x =  0;
+     return true;
+   } else {
+    return false; 
    }
  }
 }
