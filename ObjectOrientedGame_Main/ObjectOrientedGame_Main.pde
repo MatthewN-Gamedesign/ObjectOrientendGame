@@ -2,7 +2,7 @@ Player player;
 ArrayList<Goblin> goblin;
 //float speedX;
 //float speedY;\
-
+boolean game = true;
 
 void setup() {
  size(400,400);
@@ -11,6 +11,8 @@ void setup() {
 }
 
 void draw() {
+  if (game == true) {
+    frameRate(60);
  background(255,230,137); 
  
  
@@ -30,6 +32,18 @@ void draw() {
     goblin.get(i).display();
     goblin.get(i).move();
  }
+  } 
+  if (game == false) {
+    background(123,7,227);
+    frameRate(1);
+    game = true;
+  }
  
- 
+}
+
+void keyPressed() {
+  if (key == 'r') {
+    game = false;
+    goblin.clear();
+  }
 }
