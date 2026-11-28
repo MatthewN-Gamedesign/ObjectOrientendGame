@@ -22,6 +22,7 @@ void draw() {
  player.display();
  player.move();
  orb.display();
+ orb.move();
  if (goblin.size()<30) {
    if (frameCount % 10 == 0) {
     Goblin a = new Goblin();

@@ -2,10 +2,13 @@ class Orb {
  PImage Orb;
  PVector position;
  PVector velocity;
+ PVector spin;
   Orb() {
-    position = new PVector (0, 10);
+    position = new PVector (width/2, height/2 + 30);
     
     velocity = new PVector(1,0);
+    
+    spin = new PVector(10, 20);
   }
   void display() {
     imageMode(CENTER);
@@ -15,5 +18,6 @@ class Orb {
   void move(){
     position.add(velocity);
     
+    spin.rotate(90);
   }
 }
