@@ -35,6 +35,7 @@ void draw() {
   } 
   if (game == false) {
     background(123,7,227);
+    goblin.clear();
     frameRate(1);
     game = true;
   }
@@ -44,6 +45,5 @@ void draw() {
 void keyPressed() {
   if (key == 'r') {
     game = false;
-    goblin.clear();
   }
 }
