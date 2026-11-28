@@ -3,6 +3,8 @@ ArrayList<Goblin> goblin;
 //float speedX;
 //float speedY;\
 boolean game = true;
+//float timeM;
+//float timeS;
 
 void setup() {
  size(400,400);
@@ -12,6 +14,9 @@ void setup() {
 
 void draw() {
   if (game == true) {
+   //timeM = millis()/60000;
+    //timeS = millis()/1000;
+    
     frameRate(60);
  background(255,230,137); 
  
@@ -35,6 +40,8 @@ void draw() {
    game = false;
  }
  }
+ fill(255);
+ text(millis()/60000+ ":" + millis()/1000, 50, 40);
   } 
   if (game == false) {
     background(123,7,227);
